@@ -1,0 +1,428 @@
+header
+  //min-height: 620px
+  //background-color: $color-blue
+  position: relative
+
+  .nav_row
+    padding-top: 50px
+
+  .logo
+    img
+      width: 255px
+
+  .top_menu
+    font-size: em(14px)
+    text-transform: uppercase
+
+    > ul
+      @extend .ul_menu
+      li
+        line-height: 27px
+        padding: 0px 14px
+        a
+          text-decoration: none
+          color: $color-white-60
+          transition: 0.2s
+          &:hover
+            color: $color-white-80
+            padding-bottom: 5px
+            border-bottom: 1px solid
+
+  .main_title
+    padding-top: 170px
+    h1
+      color: white
+    h3
+      font-family: $font_light, $helvetica
+      padding-top: 10px
+      color: white
+
+    button
+      margin-top: 20px
+      margin-right: 5px
+
+  .head_credentials
+    position: absolute
+    bottom: 20px
+    h5
+      font-family: $font_light, $helvetica
+      font-size: em(14px)
+      color: $color-white-60
+
+
+  video
+    position: absolute
+    top: 50%
+    left: 50%
+    min-width: 100%
+    min-height: 100%
+    width: auto
+    height: auto
+    z-index: -100
+    transform: translateX(-50%) translateY(-50%)
+    background: url('../video/poster.jpg') no-repeat
+    background-size: cover
+    transition: 1s opacity
+
+  .stopfade
+    opacity: .5
+
+
+
+/** CV **/
+
+section.cv
+  position: relative
+  padding-bottom: 90px
+  .intro-txt
+    font-size: em(19px)
+  .cv-block
+    padding-top: 30px
+    h3
+      font-size: em(20px)
+      font-weight: bold
+
+    .position-items
+      margin-top: 10px
+      .position-item
+        display: inline-block
+        background-color: $color-red
+        border-radius: 3px
+        padding: 4px 25px
+        color: white
+        margin-right: 5px
+
+  .skills
+    padding-top: 50px
+    .skills-items
+      margin-top: 10px
+    ul
+      @extend .ul_menu
+
+  .education
+    .education-place
+      margin-top: 10px
+
+  .corner
+
+    //position: absolute
+    //bottom: 0
+    //height: 90px
+    //width: 100%
+    //background-image: url('../img/thumbs/corner_right.svg')
+    //background-repeat: no-repeat
+    //background-size: cover
+    //background-position: top
+
+
+
+section.benefits
+  position: relative
+  background-color: $color-blue
+  padding-bottom: 110px
+  &::after
+    content: ""
+    position: absolute
+    left: 0
+    top: 0
+    opacity: 0.6
+    width: 100%
+    height: 100%
+    background-image: url($thumbs_path + 'itmo_pattern.svg')
+    background-repeat: repeat
+    background-position: center
+
+  h2
+    text-align: center
+    color: white
+
+  .benefit-list
+    margin-top: 120px
+
+    .benefit-title
+      height: 45px
+      margin-top: 45px
+      font-size: em(20px)
+      font-weight: bold
+      color: white
+      text-align: center
+      line-height: em(20px)
+
+    .benefit-text
+      margin-top: 25px
+      color: white
+      font-family: $font_light, $helvetica
+      font-size: em(15px)
+      text-align: center
+
+    .icon
+      width: 100%
+      height: 70px
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: center
+
+      &.computer
+        background-image: url($icon_path + 'computer.svg')
+      &.signature
+        background-image: url($icon_path + 'signature.svg')
+      &.education
+        background-image: url($icon_path + 'education.svg')
+      &.time
+        background-image: url($icon_path + 'time.svg')
+
+
+section.dist
+  background-color: #a8a8a8
+  position: relative
+  h2
+    text-align: center
+    color: white
+  .dist-block
+    height: 100%
+    margin-top: -92px
+    background-size: cover
+    background-position: center center
+
+    &.learn
+      background-image: url($thumbs_path + 'dist/learn_bg.jpg')
+
+
+
+section.cta
+  padding: 30px 0
+  background-color: $color-dark-grey
+  color: white
+  .title
+    font-size: em(19px)
+  .more
+    font-size: em(16px)
+    color: $color-light-grey
+
+  button
+    line-height: 32px
+    padding: 5px 40px
+
+
+section.program
+  h2
+    text-align: center
+
+  .center-block
+    display: block
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+
+  .program-list
+    padding-top: 100px
+    .start-point
+      position: relative
+      width: 40px
+      height: 40px
+      background: none
+      color: $color-red
+      border: 1px solid
+      border-radius: 50%
+      text-align: center
+      line-height: 40px
+      margin-bottom: 70px
+      &::after
+        content: ''
+        position: absolute
+        width: 1px
+        height: 60px
+        top: 60px
+        left: 19px
+        background-color: $color-light-grey
+
+    .icon
+      background-size: cover
+      width: 85px
+      height: 73px
+      margin: 110px auto 0px
+      &.composition
+        background-image: url($icon_path + 'program/composition.svg')
+      &.photoshop
+        background-image: url($icon_path + 'program/photoshop.svg')
+      &.corel
+        background-image: url($icon_path + 'program/corel.svg')
+      &.print
+        background-image: url($icon_path + 'program/print.svg')
+      &.design
+        background-image: url($icon_path + 'program/design.svg')
+
+  .point
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      width: 1px
+      margin-top: 20px
+      height: 60px
+      background-color: $color-light-grey
+    &.last
+      &::after
+        display: none
+        content: ''
+
+
+
+    .title
+      padding: 15px 0 25px
+      color: $color-red
+      font-weight: bold
+      font-size: em(18px)
+    ul
+      @extend .ul_menu
+      li
+        display: block
+
+
+section.sign-now
+  color: white
+  text-align: center
+  background-image: url($thumbs_path + 'sign-now-bg.jpg')
+  background-size: cover
+  background-position: center
+  .sign-offer
+    margin-top: 40px
+    font-size: em(18px)
+
+  .sign-special
+    margin-top: 65px
+    color: white
+    font-weight: bold
+    text-transform: uppercase
+    font-size: em(18px)
+    background-color: $color-red
+    padding: 8px 0
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+    border-radius: 3px
+
+  table
+    margin-top: 25px
+    border: 1px solid white
+    margin-left: auto
+    margin-right: auto
+    width: 100%
+    tr, td
+      border: 1px solid white
+    td
+      padding: 15px 15px
+      &.indoor
+        width: 50%
+      .old
+        font-size: em(14px)
+        text-decoration: line-through
+        color: $color-light-grey
+
+  .credit
+    margin-top: 10px
+    font-size: em(16px)
+    text-transform: uppercase
+
+  .form
+    margin-top: 90px
+    form
+      input
+        color: black
+        display: block
+        padding: 7px 15px
+        background-color: white
+        border-radius: 3px
+        border: 1px solid white
+        width: 100%
+        margin: 0 auto
+        margin-bottom: 5px
+        @include placeholder
+          color: $color-light-grey
+        &#button
+          background-color: $color-blue
+          color: white
+          border-color: $color-blue
+          text-transform: uppercase
+          outline: none
+
+
+section.feedback
+  position: relative
+  padding-bottom: 110px
+  text-align: center
+
+  &::after
+    content: ""
+    position: absolute
+    left: 0
+    top: 0
+    opacity: 0.15
+    width: 100%
+    height: 100%
+    background-image: url($thumbs_path + 'itmo_pattern.svg')
+    background-repeat: repeat
+    background-position: center
+
+  .feedback
+    margin-top: 100px
+    .author
+      margin-top: 40px
+      font-weight: bold
+      font-size: em(18px)
+    .work
+      padding-top: 10px
+      font-family: $font_light, $helvetica
+      font-size: em(16px)
+
+
+footer
+  color: white
+  padding-top: 55px
+  background-color: $color-dark-grey
+  font-family: $font_light, $helvetica
+  position: relative
+  &::after
+    position: absolute
+    content: ''
+    bottom: -60%
+    right: -7%
+    width: 400px
+    height: 400px
+    background-color: $color-red
+    border-radius: 50%
+    background-image: url($logo-path + 'itmo_slogan.svg')
+
+  .credentials
+    font-size: em(16px)
+
+  .link
+    margin-bottom: 10px
+    i
+      vertical-align: top
+      //margin-right: 10px
+      width: 25px
+      font-size: em(14px)
+      &.margin
+        margin-top: 4px
+    .txt
+      color: $color-light-white
+      display: inline-block
+      font-size: em(14px)
+      line-height: em(18px)
+      cursor: default
+      a
+        transition: 0.2s
+        color: $color-light-white
+        text-decoration: none
+        cursor: pointer
+        &:hover
+          color: white
+
+
+  .copyrights
+    font-size: em(14px)
+    color: $color-light-grey
+    line-height: 16px
+    padding-top: 70px
+    padding-bottom: 40px

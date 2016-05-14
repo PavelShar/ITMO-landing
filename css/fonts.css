@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "ALS Schalange Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ALSSchalangeRegular/alsschlangesans.eot?#iefix") format("embedded-opentype"), url("../fonts/ALSSchalangeRegular/alsschlangesans.woff") format("woff"), url("../fonts/ALSSchalangeRegular/alsschlangesans.ttf") format("truetype"); }
+@font-face {
+  font-family: "ALS Schalange Light";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/ALSSchalangeLight/alsschlangesans-light.eot?#iefix") format("embedded-opentype"), url("../fonts/ALSSchalangeLight/alsschlangesans-light.woff") format("woff"), url("../fonts/ALSSchalangeLight/alsschlangesans-light.ttf") format("truetype"); }
+@font-face {
+  font-family: "ALS Schalange Thin";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/ALSSchalangeThin/alsschlangesans-thin.eot?#iefix") format("embedded-opentype"), url("../fonts/ALSSchalangeThin/alsschlangesans-thin.woff") format("woff"), url("../fonts/ALSSchalangeThin/alsschlangesans-thin.ttf") format("truetype"); }
+@font-face {
+  font-family: "ALS Schalange Bold";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/ALSSchalangeBold/alsschlangesans-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ALSSchalangeBold/alsschlangesans-bold.woff") format("woff"), url("../fonts/ALSSchalangeBold/alsschlangesans-bold.ttf") format("truetype"); }
+@font-face {
+  font-family: "ALS Schalange Black";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/ALSSchalangeBlack/alsschlangesans-black.eot?#iefix") format("embedded-opentype"), url("../fonts/ALSSchalangeBlack/alsschlangesans-black.woff") format("woff"), url("../fonts/ALSSchalangeBlack/alsschlangesans-black.ttf") format("truetype"); }
+@font-face {
+  font-family: "FontAwesome";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/FontAwesome/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/FontAwesome/fontawesome-webfont.woff") format("woff"), url("../fonts/FontAwesome/fontawesome-webfont.ttf") format("truetype"); }
