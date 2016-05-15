@@ -70,7 +70,10 @@ $(document).ready(function (){
 	owl.owlCarousel({
 		items:1,
 		center: true,
-		loop: true
+		loop: true,
+		autoplay:true,
+		autoplayTimeout:15000,
+		autoplayHoverPause:true
 	});
 
 	$('section.feedbacks .chevrone.right').click(function() { owl.trigger('next.owl.carousel'); });
