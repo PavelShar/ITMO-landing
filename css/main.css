@@ -94,6 +94,21 @@ section {
   padding: 70px 0;
   background-color: white; }
 
+#scroller {
+  position: fixed;
+  bottom: 30px;
+  left: 20px;
+  cursor: pointer;
+  display: none;
+  font-size: 30px;
+  color: #b8b8b8;
+  opacity: 0.4;
+  transition: 0.2s;
+  padding: 20px;
+  z-index: 100000; }
+  #scroller:hover {
+    opacity: 1; }
+
 header {
   position: relative; }
   header .nav_row {
@@ -261,7 +276,7 @@ section.dist {
     section.dist .dist-block:hover::after {
       opacity: 0.9; }
     section.dist .dist-block .wrap {
-      padding: 200px 0;
+      padding: 200px 0 130px;
       color: white;
       text-align: center;
       z-index: 100;
@@ -321,7 +336,7 @@ section.program .program-list {
     height: 40px;
     background: none;
     color: #EC0B43;
-    border: 1px solid;
+    border: 2px solid;
     border-radius: 50%;
     text-align: center;
     line-height: 40px;

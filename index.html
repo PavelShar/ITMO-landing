@@ -27,10 +27,6 @@
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="libs/owl-carousel/owl.carousel.css">
 	<link rel="stylesheet" href="libs/animate/animate.css">
-
-	<!--
-
-	-->
 	
 	<link rel="stylesheet" href="css.min/fonts.min.css">
 	<link rel="stylesheet" href="css.min/main.min.css">
@@ -42,7 +38,6 @@
 </head>
 
 <body>
-
 
 	<header>
 
@@ -58,11 +53,11 @@
 				<div class="col-lg-8 nav">
 					<nav class="top_menu">
 						<ul>
-							<li><a href="#">Особенности курса</a></li>
-							<li><a href="#">Программа</a></li>
-							<li><a href="#">Заявка на обучение</a></li>
-							<li><a href="#">Отзывы</a></li>
-							<li><a href="#">Контакты</a></li>
+							<li><a href="#" onclick="scrollTo('section.benefits')">Особенности курса</a></li>
+							<li><a href="#" onclick="scrollTo('section.program')">Программа</a></li>
+							<li><a href="#" onclick="scrollTo('section.sign-now')">Заявка на обучение</a></li>
+							<li><a href="#" onclick="scrollTo('section.feedbacks')">Отзывы</a></li>
+							<li><a href="#" onclick="scrollTo('footer')">Контакты</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -80,8 +75,8 @@
 					<h1>Стать дипломированным дизайнером?<br>Всего за 4 месяца? Реально!</h1>
 					<h3>Курс "Дизайн и верстка полиграфической продукции"<br>в Университете ИТМО</h3>
 
-					<button class="red-fill">Записаться на курс</button>
-					<button class="white icon">Узнать подробности <i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+					<button class="red-fill" onclick="scrollTo('section.sign-now')">Записаться на курс</button>
+					<button class="white icon" onclick="scrollTo('section.cv')">Узнать подробности <i class="fa fa-chevron-down" aria-hidden="true"></i></button>
 				</div>
 			</div>
 
@@ -145,27 +140,27 @@
 	<section class="benefits">
 		<div class="container">
 			<h2>Преимущества курса</h2>
-			<div class="row benefit-list">
+			<div class="benefit-list">
 
-				<div class="col-lg-3 col-sm-6">
+				<div class="col-lg-3 col-sm-12 benefit">
 					<div class="icon computer"></div>
 					<div class="benefit-title">Очная и дистанционная формы</div>
 					<div class="benefit-text">Вам нравится живое общение с преподавателем? Или же вы предпочитаете обучаться в комфортных условиях родного дома, поддерживая связь с преподавателем дистанционно?</div>
 				</div>
 
-				<div class="col-lg-3 col-sm-6">
+				<div class="col-lg-3 col-sm-12 benefit">
 					<div class="icon signature"></div>
 					<div class="benefit-title">Портфолио за время обучения</div>
 					<div class="benefit-text">За время обучения вы сформируете свое собственное портфолио, которое необходимо при устройстве на работу.</div>
 				</div>
 
-				<div class="col-lg-3 col-sm-6">
+				<div class="col-lg-3 col-sm-12 benefit">
 					<div class="icon education"></div>
 					<div class="benefit-title">Диплом<br>Университета ИТМО</div>
 					<div class="benefit-text">Диплом Университета ИТМО вызывает уважение работодателей и признается не только в России, но и за рубежом.</div>
 				</div>
 
-				<div class="col-lg-3 col-sm-6">
+				<div class="col-lg-3 col-sm-12 benefit">
 					<div class="icon time"></div>
 					<div class="benefit-title">4 месяца<br>обучения</div>
 					<div class="benefit-text">Этого достаточно, чтобы освоить новую профессию! Опытные преподаватели Университета ИТМО передадут вам свои знания и опыт, открывая двери в неповторимый мир дизайна.</div>
@@ -180,7 +175,7 @@
 		<div class="container-fluid">
 			<div class="heading"><h2>Дистанционное обучение</h2></div>
 			<div class="col-lg-4 dist-block learn">
-				<div class="wrap">
+				<div class="wrap first">
 					<div class="icon"></div>
 					<div class="title">Изучайте по-разному</div>
 					<div class="text">Материалы лекций - это не только текстовая информация, но и видеоуроки от преподавателей. А при выполнении практических заданий вы сможете опираться на подробные инструкции</div>
@@ -208,12 +203,12 @@
 	<section class="cta">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-5 col-lg-offset-2">
+				<div class="col-lg-5 col-lg-offset-2 title">
 					<div class="title">Уже представили себя в роли ведущего дизайнера?</div>
 					<div class="more">Успейте записаться прямо сейчас!</div>
 				</div>
-				<div class="col-lg-5">
-					<button class="red-fill">Записаться</button>
+				<div class="col-lg-5 button">
+					<button class="red-fill" onclick="scrollTo('section.sign-now')">Записаться</button>
 				</div>
 			</div>
 		</div>
@@ -372,7 +367,7 @@
 				<div class="col-lg-3 credentials">
 					Кафедра компьютерного проектирования и дизайна Санкт-Петербургского национального исследовательского университета информационных технологий, механики и оптики (Университет ИТМО).
 				</div>
-				<div class="col-lg-2 col-lg-offset-2">
+				<div class="col-lg-2 col-lg-offset-2 connection">
 					<div class="link">
 						<i class="fa fa-phone" aria-hidden="true"></i>
 						<div class="txt">
@@ -395,7 +390,7 @@
 					</div>
 
 				</div>
-				<div class="col-lg-2 col-lg-offset-1">
+				<div class="col-lg-2 col-lg-offset-1 social">
 					<div class="link">
 						<i class="fa fa-vk margin" aria-hidden="true"></i>
 						<div class="txt"><a href="http://design.ifmo.ru" target="_blank">ВКонтакте</a></div>
@@ -427,6 +422,7 @@
 	</footer>
 
 
+	<div id="scroller" class="hidden-md"><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
 	<!--PRELOADER-->
 	<div class="hidden"></div>
 	<div class="loader">
