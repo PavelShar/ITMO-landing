@@ -58,14 +58,6 @@ $(document).ready(function (){
 	var window_h = $(window).height();
 	$('header').css('height', window_h + 'px');
 
-	//$('.feedback').owlCarousel({
-		//animateOut: 'slideOutDown',
-		//animateIn: 'flipInX',
-	//	items:1,
-	//	center: true,
-	//});
-
-
 	var owl = $('.feedback');
 	owl.owlCarousel({
 		items:1,

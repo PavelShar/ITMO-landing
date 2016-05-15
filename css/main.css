@@ -226,17 +226,72 @@ section.benefits {
 
 section.dist {
   background-color: #a8a8a8;
-  position: relative; }
-  section.dist h2 {
-    text-align: center;
-    color: white; }
+  position: relative;
+  padding: 0; }
+  section.dist .heading {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    margin: 0 auto;
+    top: 0;
+    padding-top: 70px; }
+    section.dist .heading h2 {
+      text-align: center;
+      color: white; }
+  section.dist .container-fluid {
+    padding-left: 0;
+    padding-right: 0; }
   section.dist .dist-block {
+    position: relative;
+    display: block;
+    float: left;
     height: 100%;
-    margin-top: -92px;
     background-size: cover;
     background-position: center center; }
+    section.dist .dist-block::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: 0.8;
+      top: 0;
+      left: 0;
+      transition: 0.2s; }
+    section.dist .dist-block:hover::after {
+      opacity: 0.9; }
+    section.dist .dist-block .wrap {
+      padding: 200px 0;
+      color: white;
+      text-align: center;
+      z-index: 100;
+      position: relative; }
+    section.dist .dist-block .icon {
+      margin: 0 auto 40px;
+      height: 110px;
+      width: 135px;
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat; }
+    section.dist .dist-block .title {
+      font-weight: bold;
+      font-size: 1.25em;
+      margin-bottom: 30px; }
+    section.dist .dist-block .text {
+      padding: 0 20px;
+      min-height: 120px; }
     section.dist .dist-block.learn {
       background-image: url("../img/thumbs/dist/learn_bg.jpg"); }
+      section.dist .dist-block.learn .icon {
+        background-image: url("../img/icons/dist/education.svg"); }
+    section.dist .dist-block.chat {
+      background-image: url("../img/thumbs/dist/chat_bg.jpg"); }
+      section.dist .dist-block.chat .icon {
+        background-image: url("../img/icons/dist/dialog.svg"); }
+    section.dist .dist-block.control {
+      background-image: url("../img/thumbs/dist/control_bg.jpg"); }
+      section.dist .dist-block.control .icon {
+        background-image: url("../img/icons/dist/test.svg"); }
 
 section.cta {
   padding: 30px 0;
@@ -249,7 +304,7 @@ section.cta {
     color: #b8b8b8; }
   section.cta button {
     line-height: 32px;
-    padding: 5px 40px; }
+    padding: 5px 60px; }
 
 section.program h2 {
   text-align: center; }
@@ -323,24 +378,16 @@ section.sign-now {
   section.sign-now .sign-offer {
     margin-top: 40px;
     font-size: 1.125em; }
-  section.sign-now .sign-special {
-    margin-top: 65px;
-    color: white;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 1.125em;
-    background-color: #EC0B43;
-    padding: 8px 0;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 3px; }
   section.sign-now table {
-    margin-top: 25px;
+    margin-top: 45px;
     border: 1px solid white;
     margin-left: auto;
     margin-right: auto;
     width: 100%; }
+    section.sign-now table th {
+      padding: 10px 0;
+      background-color: #EC0B43;
+      text-transform: uppercase; }
     section.sign-now table tr, section.sign-now table td {
       border: 1px solid white; }
     section.sign-now table td {
@@ -376,11 +423,14 @@ section.sign-now {
       section.sign-now .form form input:-ms-input-placeholder {
         color: #b8b8b8; }
       section.sign-now .form form input#button {
-        background-color: #1946BA;
+        background: none;
         color: white;
-        border-color: #1946BA;
         text-transform: uppercase;
-        outline: none; }
+        outline: none;
+        transition: 0.2s; }
+        section.sign-now .form form input#button:hover {
+          background-color: #1946BA;
+          border-color: #1946BA; }
 
 section.feedbacks {
   position: relative;
