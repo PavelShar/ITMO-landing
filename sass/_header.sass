@@ -18,7 +18,7 @@ header
       @extend .ul_menu
       li
         line-height: 27px
-        padding: 0px 14px
+        padding: 0 14px
         a
           text-decoration: none
           color: $color-white-60
@@ -240,7 +240,7 @@ section.program
       background-size: cover
       width: 85px
       height: 73px
-      margin: 110px auto 0px
+      margin: 110px auto 0
       &.composition
         background-image: url($icon_path + 'program/composition.svg')
       &.photoshop
@@ -347,7 +347,7 @@ section.sign-now
           outline: none
 
 
-section.feedback
+section.feedbacks
   position: relative
   padding-bottom: 110px
   text-align: center
@@ -364,8 +364,28 @@ section.feedback
     background-repeat: repeat
     background-position: center
 
+  .chevrone
+    position: absolute
+    padding: 60px 0
+    top: 20%
+    font-size: em(30px)
+    color: #acacac
+    z-index: 1000
+    cursor: pointer
+    transition: 0.2s
+    &.left
+      left: 0
+    &.right
+      right: 0
+    &:hover
+      color: $color-blue
+
+
   .feedback
     margin-top: 100px
+    .item
+      width: 70%
+      margin: 0 auto
     .author
       margin-top: 40px
       font-weight: bold
@@ -381,17 +401,10 @@ footer
   padding-top: 55px
   background-color: $color-dark-grey
   font-family: $font_light, $helvetica
-  position: relative
-  &::after
-    position: absolute
-    content: ''
-    bottom: -60%
-    right: -7%
-    width: 400px
-    height: 400px
-    background-color: $color-red
-    border-radius: 50%
-    background-image: url($logo-path + 'itmo_slogan.svg')
+  background-image: url($logo-path + 'itmo_slogan.svg')
+  background-size: 300px
+  background-position: right -85px bottom -180px
+  background-repeat: no-repeat
 
   .credentials
     font-size: em(16px)

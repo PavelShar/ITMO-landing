@@ -52,11 +52,28 @@ $(document).ready(function (){
 	$('.toggle_menu').click(function(){
 		$(this).toggleClass('on');
 		$('.top_menu').slideToggle();
-	})
+	});
 
 
 	var window_h = $(window).height();
 	$('header').css('height', window_h + 'px');
 
+	//$('.feedback').owlCarousel({
+		//animateOut: 'slideOutDown',
+		//animateIn: 'flipInX',
+	//	items:1,
+	//	center: true,
+	//});
+
+
+	var owl = $('.feedback');
+	owl.owlCarousel({
+		items:1,
+		center: true,
+		loop: true
+	});
+
+	$('section.feedbacks .chevrone.right').click(function() { owl.trigger('next.owl.carousel'); });
+	$('section.feedbacks .chevrone.left').click(function() { owl.trigger('prev.owl.carousel'); });
 
 });

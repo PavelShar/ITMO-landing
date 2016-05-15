@@ -105,7 +105,7 @@ header {
     text-transform: uppercase; }
     header .top_menu > ul li {
       line-height: 27px;
-      padding: 0px 14px; }
+      padding: 0 14px; }
       header .top_menu > ul li a {
         text-decoration: none;
         color: rgba(255, 255, 255, 0.6);
@@ -283,7 +283,7 @@ section.program .program-list {
     background-size: cover;
     width: 85px;
     height: 73px;
-    margin: 110px auto 0px; }
+    margin: 110px auto 0; }
     section.program .program-list .icon.composition {
       background-image: url("../img/icons/program/composition.svg"); }
     section.program .program-list .icon.photoshop {
@@ -382,11 +382,11 @@ section.sign-now {
         text-transform: uppercase;
         outline: none; }
 
-section.feedback {
+section.feedbacks {
   position: relative;
   padding-bottom: 110px;
   text-align: center; }
-  section.feedback::after {
+  section.feedbacks::after {
     content: "";
     position: absolute;
     left: 0;
@@ -397,13 +397,31 @@ section.feedback {
     background-image: url("../img/thumbs/itmo_pattern.svg");
     background-repeat: repeat;
     background-position: center; }
-  section.feedback .feedback {
+  section.feedbacks .chevrone {
+    position: absolute;
+    padding: 60px 0;
+    top: 20%;
+    font-size: 1.875em;
+    color: #acacac;
+    z-index: 1000;
+    cursor: pointer;
+    transition: 0.2s; }
+    section.feedbacks .chevrone.left {
+      left: 0; }
+    section.feedbacks .chevrone.right {
+      right: 0; }
+    section.feedbacks .chevrone:hover {
+      color: #1946BA; }
+  section.feedbacks .feedback {
     margin-top: 100px; }
-    section.feedback .feedback .author {
+    section.feedbacks .feedback .item {
+      width: 70%;
+      margin: 0 auto; }
+    section.feedbacks .feedback .author {
       margin-top: 40px;
       font-weight: bold;
       font-size: 1.125em; }
-    section.feedback .feedback .work {
+    section.feedbacks .feedback .work {
       padding-top: 10px;
       font-family: "ALS Schalange Light", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
       font-size: 1em; }
@@ -413,17 +431,10 @@ footer {
   padding-top: 55px;
   background-color: #444444;
   font-family: "ALS Schalange Light", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  position: relative; }
-  footer::after {
-    position: absolute;
-    content: "";
-    bottom: -60%;
-    right: -7%;
-    width: 400px;
-    height: 400px;
-    background-color: #EC0B43;
-    border-radius: 50%;
-    background-image: url("../img/logos/itmo_slogan.svg"); }
+  background-image: url("../img/logos/itmo_slogan.svg");
+  background-size: 300px;
+  background-position: right -85px bottom -180px;
+  background-repeat: no-repeat; }
   footer .credentials {
     font-size: 1em; }
   footer .link {
