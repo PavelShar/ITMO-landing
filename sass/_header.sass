@@ -73,7 +73,7 @@ header
 
 section.cv
   position: relative
-  padding-bottom: 90px
+  padding-bottom: 0px
   .intro-txt
     font-size: em(19px)
   .cv-block
@@ -103,16 +103,26 @@ section.cv
     .education-place
       margin-top: 10px
 
-  .corner
+  .macbook
+    //background-image: url($thumbs_path + 'Macbook-Flat-Mockup.svg')
+    z-index: 10
+    video
+      position: absolute
+      top: -75px
+      left: 127px
+      height: 105%
+    img
+      vertical-align: top
+      margin-top: -110px
+      width: 180%
 
-    //position: absolute
-    //bottom: 0
-    //height: 90px
-    //width: 100%
-    //background-image: url('../img/thumbs/corner_right.svg')
-    //background-repeat: no-repeat
-    //background-size: cover
-    //background-position: top
+  .corner
+    padding-top: 90px
+    width: 100%
+    img
+      width: 101%
+      margin-bottom: -1px
+
 
 
 
@@ -182,7 +192,7 @@ section.dist
     width: 100%
     margin: 0 auto
     top: 0
-    padding-top: 70px
+    padding-top: 200px
     h2
       text-align: center
       color: white
@@ -211,7 +221,7 @@ section.dist
       &::after
         opacity: 0.9
     .wrap
-      padding: 200px 0 130px
+      padding: 300px 0 130px
       color: white
       text-align: center
       z-index: 100
@@ -246,6 +256,13 @@ section.dist
       .icon
         background-image: url($icon_path + 'dist/test.svg')
 
+  .corner
+    position: absolute
+    top: -2px
+    z-index: 100
+    width: 100%
+    img
+      width: 100%
 
 section.cta
   padding: 30px 0

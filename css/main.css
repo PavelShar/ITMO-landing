@@ -7,7 +7,8 @@ html.js .loader {
   right: 0;
   top: 0;
   width: 100%;
-  z-index: 9999; }
+  z-index: 9999;
+  background-color: #1946BA; }
   html.js .loader .loader_inner {
     background-image: url("../img/preloader.gif");
     background-size: cover;
@@ -166,7 +167,7 @@ header {
 /** CV */
 section.cv {
   position: relative;
-  padding-bottom: 90px; }
+  padding-bottom: 0px; }
   section.cv .intro-txt {
     font-size: 1.1875em; }
   section.cv .cv-block {
@@ -189,6 +190,23 @@ section.cv {
       margin-top: 10px; }
   section.cv .education .education-place {
     margin-top: 10px; }
+  section.cv .macbook {
+    z-index: 10; }
+    section.cv .macbook video {
+      position: absolute;
+      top: -75px;
+      left: 127px;
+      height: 105%; }
+    section.cv .macbook img {
+      vertical-align: top;
+      margin-top: -110px;
+      width: 180%; }
+  section.cv .corner {
+    padding-top: 90px;
+    width: 100%; }
+    section.cv .corner img {
+      width: 101%;
+      margin-bottom: -1px; }
 
 section.benefits {
   position: relative;
@@ -249,7 +267,7 @@ section.dist {
     width: 100%;
     margin: 0 auto;
     top: 0;
-    padding-top: 70px; }
+    padding-top: 200px; }
     section.dist .heading h2 {
       text-align: center;
       color: white; }
@@ -276,7 +294,7 @@ section.dist {
     section.dist .dist-block:hover::after {
       opacity: 0.9; }
     section.dist .dist-block .wrap {
-      padding: 200px 0 130px;
+      padding: 300px 0 130px;
       color: white;
       text-align: center;
       z-index: 100;
@@ -307,6 +325,13 @@ section.dist {
       background-image: url("../img/thumbs/dist/control_bg.jpg"); }
       section.dist .dist-block.control .icon {
         background-image: url("../img/icons/dist/test.svg"); }
+  section.dist .corner {
+    position: absolute;
+    top: -2px;
+    z-index: 100;
+    width: 100%; }
+    section.dist .corner img {
+      width: 100%; }
 
 section.cta {
   padding: 30px 0;

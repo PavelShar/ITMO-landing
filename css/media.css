@@ -36,6 +36,8 @@
     width: 60%;
     margin: 0 auto; }
 
+  section.dist .heading {
+    padding-top: 100px; }
   section.dist .wrap {
     padding: 40px 0 !important; }
     section.dist .wrap.first {
