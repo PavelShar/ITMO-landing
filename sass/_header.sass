@@ -18,7 +18,7 @@ header
       @extend .ul_menu
       li
         line-height: 27px
-        padding: 0px 14px
+        padding: 0 14px
         a
           text-decoration: none
           color: $color-white-60
@@ -73,7 +73,7 @@ header
 
 section.cv
   position: relative
-  padding-bottom: 90px
+  padding-bottom: 0px
   .intro-txt
     font-size: em(19px)
   .cv-block
@@ -103,16 +103,26 @@ section.cv
     .education-place
       margin-top: 10px
 
-  .corner
+  .macbook
+    //background-image: url($thumbs_path + 'Macbook-Flat-Mockup.svg')
+    z-index: 10
+    video
+      position: absolute
+      top: -75px
+      left: 127px
+      height: 105%
+    img
+      vertical-align: top
+      margin-top: -110px
+      width: 180%
 
-    //position: absolute
-    //bottom: 0
-    //height: 90px
-    //width: 100%
-    //background-image: url('../img/thumbs/corner_right.svg')
-    //background-repeat: no-repeat
-    //background-size: cover
-    //background-position: top
+  .corner
+    padding-top: 90px
+    width: 100%
+    img
+      width: 101%
+      margin-bottom: -1px
+
 
 
 
@@ -175,19 +185,84 @@ section.benefits
 section.dist
   background-color: #a8a8a8
   position: relative
-  h2
-    text-align: center
-    color: white
+  padding: 0
+  .heading
+    position: absolute
+    z-index: 1000
+    width: 100%
+    margin: 0 auto
+    top: 0
+    padding-top: 200px
+    h2
+      text-align: center
+      color: white
+  .container-fluid
+    padding-left: 0
+    padding-right: 0
+
   .dist-block
+    position: relative
+    display: block
+    float: left
     height: 100%
-    margin-top: -92px
     background-size: cover
     background-position: center center
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      background-color: black
+      opacity: 0.8
+      top: 0
+      left: 0
+      transition: 0.2s
+    &:hover
+      &::after
+        opacity: 0.9
+    .wrap
+      padding: 300px 0 130px
+      color: white
+      text-align: center
+      z-index: 100
+      position: relative
+    .icon
+      margin: 0 auto 40px
+      height: 110px
+      width: 135px
+      background-size: contain
+      background-position: center center
+      background-repeat: no-repeat
+    .title
+      font-weight: bold
+      font-size: em(20px)
+      margin-bottom: 30px
+    .text
+      padding: 0 20px
+      min-height: 120px
 
     &.learn
       background-image: url($thumbs_path + 'dist/learn_bg.jpg')
+      .icon
+        background-image: url($icon_path + 'dist/education.svg')
 
+    &.chat
+      background-image: url($thumbs_path + 'dist/chat_bg.jpg')
+      .icon
+        background-image: url($icon_path + 'dist/dialog.svg')
 
+    &.control
+      background-image: url($thumbs_path + 'dist/control_bg.jpg')
+      .icon
+        background-image: url($icon_path + 'dist/test.svg')
+
+  .corner
+    position: absolute
+    top: -2px
+    z-index: 100
+    width: 100%
+    img
+      width: 100%
 
 section.cta
   padding: 30px 0
@@ -201,7 +276,7 @@ section.cta
 
   button
     line-height: 32px
-    padding: 5px 40px
+    padding: 5px 60px
 
 
 section.program
@@ -222,7 +297,7 @@ section.program
       height: 40px
       background: none
       color: $color-red
-      border: 1px solid
+      border: 2px solid
       border-radius: 50%
       text-align: center
       line-height: 40px
@@ -240,7 +315,7 @@ section.program
       background-size: cover
       width: 85px
       height: 73px
-      margin: 110px auto 0px
+      margin: 110px auto 0
       &.composition
         background-image: url($icon_path + 'program/composition.svg')
       &.photoshop
@@ -266,8 +341,6 @@ section.program
         display: none
         content: ''
 
-
-
     .title
       padding: 15px 0 25px
       color: $color-red
@@ -289,25 +362,16 @@ section.sign-now
     margin-top: 40px
     font-size: em(18px)
 
-  .sign-special
-    margin-top: 65px
-    color: white
-    font-weight: bold
-    text-transform: uppercase
-    font-size: em(18px)
-    background-color: $color-red
-    padding: 8px 0
-    width: 100%
-    margin-left: auto
-    margin-right: auto
-    border-radius: 3px
-
   table
-    margin-top: 25px
+    margin-top: 45px
     border: 1px solid white
     margin-left: auto
     margin-right: auto
     width: 100%
+    th
+      padding: 10px 0
+      background-color: #EC0B43
+      text-transform: uppercase
     tr, td
       border: 1px solid white
     td
@@ -340,14 +404,18 @@ section.sign-now
         @include placeholder
           color: $color-light-grey
         &#button
-          background-color: $color-blue
+          background: none
           color: white
-          border-color: $color-blue
           text-transform: uppercase
           outline: none
+          transition: 0.2s
+          &:hover
+            background-color: $color-blue
+            border-color: $color-blue
 
 
-section.feedback
+
+section.feedbacks
   position: relative
   padding-bottom: 110px
   text-align: center
@@ -364,8 +432,28 @@ section.feedback
     background-repeat: repeat
     background-position: center
 
+  .chevrone
+    position: absolute
+    padding: 60px 0
+    top: 20%
+    font-size: em(30px)
+    color: #acacac
+    z-index: 1000
+    cursor: pointer
+    transition: 0.2s
+    &.left
+      left: 0
+    &.right
+      right: 0
+    &:hover
+      color: $color-blue
+
+
   .feedback
     margin-top: 100px
+    .item
+      width: 70%
+      margin: 0 auto
     .author
       margin-top: 40px
       font-weight: bold
@@ -381,17 +469,10 @@ footer
   padding-top: 55px
   background-color: $color-dark-grey
   font-family: $font_light, $helvetica
-  position: relative
-  &::after
-    position: absolute
-    content: ''
-    bottom: -60%
-    right: -7%
-    width: 400px
-    height: 400px
-    background-color: $color-red
-    border-radius: 50%
-    background-image: url($logo-path + 'itmo_slogan.svg')
+  background-image: url($logo-path + 'itmo_slogan.svg')
+  background-size: 300px
+  background-position: right -85px bottom -180px
+  background-repeat: no-repeat
 
   .credentials
     font-size: em(16px)

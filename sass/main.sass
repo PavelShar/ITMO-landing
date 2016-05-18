@@ -11,12 +11,12 @@ html.js .loader
 	top: 0
 	width: 100%
 	z-index: 9999
+	background-color: $color-blue
 	.loader_inner
-		background-image: url("../img/preloader.gif")
+		background-image: url("../img/loader.svg")
 		background-size: cover
 		background-repeat: no-repeat
 		background-position: center center
-		background-color: #fff
 		height: 60px
 		width: 60px
 		margin-top: -30px
@@ -107,6 +107,23 @@ button
 section
 	padding: 70px 0
 	background-color: white
+
+
+
+#scroller
+	position: fixed
+	bottom: 30px
+	left: 20px
+	cursor: pointer
+	display: none
+	font-size: 30px
+	color: $color-light-grey
+	opacity: 0.4
+	transition: 0.2s
+	padding: 20px
+	z-index: 100000
+	&:hover
+		opacity: 1
 
 @import "header"
 

@@ -3,18 +3,20 @@
 
 /*==========  Desktop First Method  ==========*/
 
+@media only screen and (max-width : 1330px)
+  #scroller
+    display: none !important
+
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 
   header
     .logo, .hamburger
       z-index: 2
-
     .nav
       position: absolute
-      left: 0px
       top: -50px
-      background-color: $color-blue
       width: 100%
       z-index: 1
     .top_menu
@@ -32,18 +34,73 @@
               padding: 6px 0
               border: 0px
 
+  section.benefits
+    .benefit
+      margin-bottom: 50px
+      &:last-child
+        margin-bottom: 0px !important
+    .benefit-title
+      margin-top: 20px !important
+    .benefit-text
+      margin-top: 10px !important
+      width: 60%
+      margin: 0 auto
+
+  section.dist
+    .heading
+      padding-top: 100px
+    .wrap
+      padding: 40px 0 !important
+      &.first
+        padding-top: 200px !important
+    .text
+      width: 60%
+      margin: 0 auto
+
+  section.cta
+    text-align: center
+    .button
+      margin-top: 15px
+
+  footer
+    .credentials, .connection
+      margin-bottom: 30px
+    .copyrights
+      padding-top: 30px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-/**/
+
+
+  section.cta
+    .title
+      font-size: em(18px)
+      margin-bottom: 5px
+
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 
+  h2
+    line-height: em(20px)
+
+
   .main_title
     padding-top: 150px !important
     h1
       font-size: em(32px)
+
+
+
+  section.dist
+    .text
+      width: 85%
+      margin: 0 auto
+
+  footer
+    .copyrights
+      width: 65%
 
   /*Disable Animation on Mobile Devices*/
   .animated
@@ -72,22 +129,52 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 
+
   header
     .logo
       img
         width: 230px
-
     .toggle_menu
       margin-top: 11px
-
     .main_title
       padding-top: 50px !important
-
       h1
         font-size: em(35px)
-
+      h3
+        padding-bottom: 20px
       button
         width: 100%
+        margin-top: 3px
+
+
+
+  section.cv
+    .position-item
+      margin-top: 3px
+
+  section.benefits
+    .benefit
+      .benefit-text
+        width: 100% !important
+
+
+
+
+  section.dist
+    .text
+      padding: 0 !important
+
+
+
+  footer
+    background-position: right -40px bottom -180px
+    .copyrights
+      width: auto
+      padding-bottom: 130px
+
+
+
+
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
@@ -99,6 +186,13 @@
 
   .toggle_menu
     margin-top: 9px
+
+
+
+  section.feedbacks
+    .feedback
+      .text
+        font-size: em(14px)
 
 
 /*==========  Mobile First Method  ==========*/

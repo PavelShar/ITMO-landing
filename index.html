@@ -8,10 +8,9 @@
 
 	<meta charset="utf-8">
 
-	<title>Заголовок</title>
-	<meta name="description" content="">
+	<title>Дизайн и верстка полиграфической продукции в Университете ИТМО</title>
+	<meta name="description" content='Курс "Дизайн и верстка полиграфической продукции" в Университете ИТМО'>
 
-	<!--
 	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
@@ -19,17 +18,17 @@
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
--->
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="libs/owl-carousel/owl.carousel.css">
 	<link rel="stylesheet" href="libs/animate/animate.css">
 	
-	<link rel="stylesheet" href="css/fonts.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" href="css.min/fonts.min.css">
+	<link rel="stylesheet" href="css.min/main.min.css">
+	<link rel="stylesheet" href="css.min/media.min.css">
 	<link rel="stylesheet" href="css.min/font-awesome.min.css">
 
 	<script src="libs/modernizr/modernizr.js"></script>
@@ -37,7 +36,6 @@
 </head>
 
 <body>
-
 
 	<header>
 
@@ -53,11 +51,11 @@
 				<div class="col-lg-8 nav">
 					<nav class="top_menu">
 						<ul>
-							<li><a href="#">Особенности курса</a></li>
-							<li><a href="#">Программа</a></li>
-							<li><a href="#">Заявка на обучение</a></li>
-							<li><a href="#">Отзывы</a></li>
-							<li><a href="#">Контакты</a></li>
+							<li><a href="#" onclick="scrollTo('section.benefits')">Особенности курса</a></li>
+							<li><a href="#" onclick="scrollTo('section.program')">Программа</a></li>
+							<li><a href="#" onclick="scrollTo('section.sign-now')">Заявка на обучение</a></li>
+							<li><a href="#" onclick="scrollTo('section.feedbacks')">Отзывы</a></li>
+							<li><a href="#" onclick="scrollTo('footer')">Контакты</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -75,8 +73,8 @@
 					<h1>Стать дипломированным дизайнером?<br>Всего за 4 месяца? Реально!</h1>
 					<h3>Курс "Дизайн и верстка полиграфической продукции"<br>в Университете ИТМО</h3>
 
-					<button class="red-fill">Записаться на курс</button>
-					<button class="white icon">Узнать подробности <i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+					<button class="red-fill" onclick="scrollTo('section.sign-now')">Записаться на курс</button>
+					<button class="white icon" onclick="scrollTo('section.cv')">Узнать подробности <i class="fa fa-chevron-down" aria-hidden="true"></i></button>
 				</div>
 			</div>
 
@@ -89,7 +87,6 @@
 
 	</header>
 
-
 	<section class="cv">
 		<div class="container">
 			<h2>Ваше резюме</h2>
@@ -99,70 +96,80 @@
 				</div>
 			</div>
 
-			<div class="row cv-block position">
-				<div class="col-lg-6">
-					<h3>Должность</h3>
-					<div class="position-items">
-						<div class="position-item">Дизайнер полиграфии</div>
-						<div class="position-item">Ведущий дизайнер</div>
+			<div class="row  col-lg-6">
+				<div class="cv-block position">
+					<div>
+						<h3>Должность</h3>
+						<div class="position-items">
+							<div class="position-item">Дизайнер полиграфии</div>
+							<div class="position-item">Ведущий дизайнер</div>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="row cv-block skills">
-				<div class="col-lg-6">
-					<h3>Ключевые умения и навыки</h3>
-					<div class="skills-items">
-						<ul>
-							<li>Умение креативно мыслить</li>
-							<li>Знание основ композиции, истории и направлений дизайна</li>
-							<li>Владение программами Adobe PhotoShop, Adobe InDesign‚ Adobe Acrobat‚ Corel Draw</li>
-							<li>Верстка, препресс</li>
-							<li>Возможность создавать с нуля графические проекты любой сложности</li>
-						</ul>
+				<div class="cv-block skills">
+					<div>
+						<h3>Ключевые умения и навыки</h3>
+						<div class="skills-items">
+							<ul>
+								<li>Умение креативно мыслить</li>
+								<li>Знание основ композиции, истории и направлений дизайна</li>
+								<li>Владение программами Adobe PhotoShop, Adobe InDesign‚ Adobe Acrobat‚ Corel Draw</li>
+								<li>Верстка, препресс</li>
+								<li>Возможность создавать с нуля графические проекты любой сложности</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="row cv-block education">
-				<div class="col-lg-6">
-					<h3>Образование</h3>
-					<div class="education-place">
-						высшее, курс профессиональной переподготовки <br>"Дизайн и верстка полиграфической продукции" в Университете ИТМО
+				<div class="cv-block education">
+					<div>
+						<h3>Образование</h3>
+						<div class="education-place">
+							высшее, курс профессиональной переподготовки <br>"Дизайн и верстка полиграфической продукции" в Университете ИТМО
+						</div>
 					</div>
 				</div>
+
 			</div>
+			<div class="col-lg-6 macbook hidden-md hidden-sm hidden-xs">
+				<img src="img/thumbs/Macbook-Flat-Mockup.svg">
+				<video autoplay loop>
+					<source src="video/speed-art.mp4" type="video/mp4">
+				</video>
 
-
+			</div>
 		</div>
-		<div class="corner"></div>
-	</section>
 
+		<div class="corner">
+			<img src="img/thumbs/corner_right.svg">
+		</div>
+	</section>
 
 	<section class="benefits">
 		<div class="container">
 			<h2>Преимущества курса</h2>
-			<div class="row benefit-list">
+			<div class="benefit-list">
 
-				<div class="col-lg-3 col-sm-6">
+				<div class="col-lg-3 col-sm-12 benefit">
 					<div class="icon computer"></div>
 					<div class="benefit-title">Очная и дистанционная формы</div>
 					<div class="benefit-text">Вам нравится живое общение с преподавателем? Или же вы предпочитаете обучаться в комфортных условиях родного дома, поддерживая связь с преподавателем дистанционно?</div>
 				</div>
 
-				<div class="col-lg-3 col-sm-6">
+				<div class="col-lg-3 col-sm-12 benefit">
 					<div class="icon signature"></div>
 					<div class="benefit-title">Портфолио за время обучения</div>
 					<div class="benefit-text">За время обучения вы сформируете свое собственное портфолио, которое необходимо при устройстве на работу.</div>
 				</div>
 
-				<div class="col-lg-3 col-sm-6">
+				<div class="col-lg-3 col-sm-12 benefit">
 					<div class="icon education"></div>
 					<div class="benefit-title">Диплом<br>Университета ИТМО</div>
 					<div class="benefit-text">Диплом Университета ИТМО вызывает уважение работодателей и признается не только в России, но и за рубежом.</div>
 				</div>
 
-				<div class="col-lg-3 col-sm-6">
+				<div class="col-lg-3 col-sm-12 benefit">
 					<div class="icon time"></div>
 					<div class="benefit-title">4 месяца<br>обучения</div>
 					<div class="benefit-text">Этого достаточно, чтобы освоить новую профессию! Опытные преподаватели Университета ИТМО передадут вам свои знания и опыт, открывая двери в неповторимый мир дизайна.</div>
@@ -173,20 +180,49 @@
 		</div>
 	</section>
 
-
 	<section class="dist">
-		<h2>Дистанционное обучение</h2>
+
+		<div class="corner">
+			<img src="img/thumbs/corner_left.svg">
+		</div>
+
+		<div class="container-fluid">
+			<div class="heading"><h2>Дистанционное обучение</h2></div>
+			<div class="col-lg-4 dist-block learn">
+				<div class="wrap first">
+					<div class="icon"></div>
+					<div class="title">Изучайте по-разному</div>
+					<div class="text">Материалы лекций - это не только текстовая информация, но и видеоуроки от преподавателей. А при выполнении практических заданий вы сможете опираться на подробные инструкции</div>
+				</div>
+			</div>
+			<div class="col-lg-4 dist-block chat">
+				<div class="wrap">
+					<div class="icon"></div>
+					<div class="title">Общайтесь с преподавателями</div>
+					<div class="text">В системе вы можете задать интересующие вас вопросы и получить оперативный ответ от опытных наставников. Или же связаться любым другим удобным образом - по электронной почте или видеосвязи</div>
+				</div>
+			</div>
+			<div class="col-lg-4 dist-block control">
+				<div class="wrap">
+					<div class="icon"></div>
+					<div class="title">Контроль обучения</div>
+					<div class="text">Для закрепления полученных знаний в ходе изучения курса, вам будет предложено пройти тест, или выполнить творческую работу - например, создать буклет для театральной выставки</div>
+				</div>
+			</div>
+
+		</div>
+
 	</section>
 
 	<section class="cta">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-5 col-lg-offset-2">
+				<div class="col-lg-5 col-lg-offset-2 title">
 					<div class="title">Уже представили себя в роли ведущего дизайнера?</div>
 					<div class="more">Успейте записаться прямо сейчас!</div>
 				</div>
-				<div class="col-lg-5">
-					<button class="red-fill">Записаться</button>
+				<div class="col-lg-5 button">
+					<button class="red-fill" onclick="scrollTo('section.sign-now')">Записаться</button>
 				</div>
 			</div>
 		</div>
@@ -267,16 +303,17 @@
 		</div>
 	</section>
 
-
 	<section class="sign-now">
 		<div class="container">
 			<h2>Начните обучение прямо сейчас</h2>
 			<div class="row">
 				<div class="col-lg-6 col-lg-offset-3">
 					<div class="sign-offer">Записаться на курс<br>"Дизайн и верстка полиграфической продукции"</div>
-					<div class="sign-special">специальное предложение</div>
 
 					<table>
+						<thead>
+							<th colspan="2">Специальное предложение</th>
+						</thead>
 						<tr>
 							<td class="indoor">Очная форма</td>
 							<td>Дистанционная форма</td>
@@ -308,17 +345,32 @@
 		</div>
 	</section>
 
-	<section class="feedback">
+	<section class="feedbacks">
 		<div class="container">
 			<h2>Отзывы о курсе</h2>
-			<div class="row">
-				<div class="col-lg-2"></div>
+			<div class="row col-lg-12">
+				<div class="col-lg-2 chevrone left"><i class="fa fa-chevron-left"></i></div>
 				<div class="col-lg-8 feedback">
-					<div class="text">Для меня курс Дизайн и Полиграфия стал громом среди ясного неба! Он осветил мне путь в лакшари жизнь, где нет больше места тяжелой физической работе (ранее я работал в кузнице). Теперь же я перешел в цех проектирования молотов, по моим эскизам и 3д моделям создаются воистину богоподобные творения, достойные единиц. Спасибо ИТМО и всем его преподавателям за то, что они дали мне эти знания за столь короткий срок и без необходимости являться очно (я живу в Асгарде).</div>
-					<div class="author">Петр Викторович Тор</div>
-					<div class="work">Ведущий дизайнер холодного оружия<br> центральной кузницы Асгарда</div>
+					<div class="item">
+						<div class="text">Для меня курс Дизайн и Полиграфия стал громом среди ясного неба! Он осветил мне путь в лакшари жизнь, где нет больше места тяжелой физической работе (ранее я работал в кузнице). Теперь же я перешел в цех проектирования молотов, по моим эскизам и 3д моделям создаются воистину богоподобные творения, достойные единиц. Спасибо ИТМО и всем его преподавателям за то, что они дали мне эти знания за столь короткий срок и без необходимости являться очно (я живу в Асгарде).</div>
+						<div class="author">Петр Викторович Тор</div>
+						<div class="work">Ведущий дизайнер холодного оружия<br> центральной кузницы Асгарда</div>
+					</div>
+
+					<div class="item">
+						<div class="text">Долгое время мне была интересна профессия дизайнера, однако в силу особенностей моего характера, мне не удавалось обучаться самостоятельно. К счастью, я прошла обучение в ИТМО по специальности полиграфия и дизайн. Это позволило мне обрести необходимые навыки владения такими программами, как Corel Draw, Adobe Photoshop и Adobe Illustrator, получить знания об особенностях работы с веб страницами и печатной продукцией. А авторитетный диплом ИТМО позволил найти мне работу, которая мне интересна.</div>
+						<div class="author">Ирина Демьяновна Гротова</div>
+						<div class="work">Дизайнер полиграфии<br>в агенстве "Infotech"</div>
+					</div>
+
+					<div class="item">
+						<div class="text">Высококвалифицированный преподавательский состав, современная материально-техническая база и прикладные знания, вкупе с возможностью удаленного обучения не оставляют конкурентов при выборе места для обучения профессии дизайнера. ИТМО — одно из лучших мест для обучения специалистов в своем деле, и это не пустые слова. Я проверил это на себе, и очень рад, что принял решение учиться именно здесь.</div>
+						<div class="author">Сергей Константинович Лязь</div>
+						<div class="work">Ведущий специалист по компьютерной графике<br> интернациональной корпорации "Magazines Polygraphics Inc."</div>
+					</div>
+
 				</div>
-				<div class="col-lg-2"></div>
+				<div class="col-lg-2 chevrone right"><i class="fa fa-chevron-right"></i></div>
 			</div>
 		</div>
 	</section>
@@ -329,7 +381,7 @@
 				<div class="col-lg-3 credentials">
 					Кафедра компьютерного проектирования и дизайна Санкт-Петербургского национального исследовательского университета информационных технологий, механики и оптики (Университет ИТМО).
 				</div>
-				<div class="col-lg-2 col-lg-offset-2">
+				<div class="col-lg-2 col-lg-offset-2 connection">
 					<div class="link">
 						<i class="fa fa-phone" aria-hidden="true"></i>
 						<div class="txt">
@@ -352,14 +404,14 @@
 					</div>
 
 				</div>
-				<div class="col-lg-2 col-lg-offset-1">
+				<div class="col-lg-2 col-lg-offset-1 social">
 					<div class="link">
 						<i class="fa fa-vk margin" aria-hidden="true"></i>
-						<div class="txt"><a href="http://design.ifmo.ru" target="_blank">ВКонтакте</a></div>
+						<div class="txt"><a href="https://vk.com/ifmo.online" target="_blank">ВКонтакте</a></div>
 					</div>
 					<div class="link">
 						<i class="fa fa-facebook margin" aria-hidden="true"></i>
-						<div class="txt"><a href="http://design.ifmo.ru" target="_blank">Facebook</a></div>
+						<div class="txt"><a href="https://www.facebook.com/ifmodesign" target="_blank">Facebook</a></div>
 					</div>
 					<div class="link">
 						<i class="fa fa-twitter margin" aria-hidden="true"></i>
@@ -383,13 +435,16 @@
 
 	</footer>
 
-	<div class="hidden"></div>
 
+	<div id="scroller" class="hidden-md"><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
+	<!--PRELOADER-->
+	<div class="hidden"></div>
 	<div class="loader">
 		<div class="loader_inner"></div>
 	</div>
 
 	<!--[if lt IE 9]>
+
 	<script src="libs/html5shiv/es5-shim.min.js"></script>
 	<script src="libs/html5shiv/html5shiv.min.js"></script>
 	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
@@ -397,11 +452,17 @@
 	<![endif]-->
 
 	<script src="libs/jquery/jquery-1.11.2.min.js"></script>
-	<script src="libs/waypoints/waypoints.min.js"></script>
-	<script src="libs/animate/animate-css.js"></script>
 	<script src="libs/plugins-scroll/plugins-scroll.js"></script>
-	
+	<script src="libs/owl-carousel/owl.carousel.min.js"></script>
+
+
 	<script src="js/common.js"></script>
+
+	<!--
+	<script src="libs/waypoints/waypoints.min.js"></script>
+<script src="libs/animate/animate-css.js"></script>
+	-->
 	
+
 </body>
 </html>

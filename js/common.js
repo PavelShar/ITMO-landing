@@ -7,23 +7,6 @@ $(function() {
 		});
 	};
 
-	//E-mail Ajax Send
-	//Documentation & Example: https://github.com/agragregra/uniMail
-	$("form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
-		}).done(function() {
-			alert("Thank you!");
-			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000);
-		});
-		return false;
-	});
 
 	//Chrome Smooth Scroll
 	try {
@@ -46,17 +29,51 @@ $(window).load(function() {
 
 });
 
+function scrollTo (elem) {
+	$('html, body').animate({
+		scrollTop: $(elem).offset().top
+	}, 1000);
+}
 
 $(document).ready(function (){
 
 	$('.toggle_menu').click(function(){
 		$(this).toggleClass('on');
 		$('.top_menu').slideToggle();
-	})
+	});
 
 
 	var window_h = $(window).height();
 	$('header').css('height', window_h + 'px');
 
+	var owl = $('.feedback');
+	owl.owlCarousel({
+		items:1,
+		center: true,
+		loop: true,
+		autoplay:true,
+		autoplayTimeout:15000,
+		autoplayHoverPause:true
+	});
+
+	$('section.feedbacks .chevrone.right').click(function() { owl.trigger('next.owl.carousel'); });
+	$('section.feedbacks .chevrone.left').click(function() { owl.trigger('prev.owl.carousel'); });
+
+
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > window_h/2) {
+			$('#scroller').fadeIn();
+		} else {
+			$('#scroller').fadeOut();
+		}
+	});
+	$('#scroller').click(function () {
+		$('body,html').animate({
+			scrollTop: 0
+		}, 400);
+		return false;
+	});
 
 });
+
+

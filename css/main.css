@@ -7,13 +7,13 @@ html.js .loader {
   right: 0;
   top: 0;
   width: 100%;
-  z-index: 9999; }
+  z-index: 9999;
+  background-color: #1946BA; }
   html.js .loader .loader_inner {
-    background-image: url("../img/preloader.gif");
+    background-image: url("../img/loader.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    background-color: #fff;
     height: 60px;
     width: 60px;
     margin-top: -30px;
@@ -94,6 +94,21 @@ section {
   padding: 70px 0;
   background-color: white; }
 
+#scroller {
+  position: fixed;
+  bottom: 30px;
+  left: 20px;
+  cursor: pointer;
+  display: none;
+  font-size: 30px;
+  color: #b8b8b8;
+  opacity: 0.4;
+  transition: 0.2s;
+  padding: 20px;
+  z-index: 100000; }
+  #scroller:hover {
+    opacity: 1; }
+
 header {
   position: relative; }
   header .nav_row {
@@ -105,7 +120,7 @@ header {
     text-transform: uppercase; }
     header .top_menu > ul li {
       line-height: 27px;
-      padding: 0px 14px; }
+      padding: 0 14px; }
       header .top_menu > ul li a {
         text-decoration: none;
         color: rgba(255, 255, 255, 0.6);
@@ -151,7 +166,7 @@ header {
 /** CV */
 section.cv {
   position: relative;
-  padding-bottom: 90px; }
+  padding-bottom: 0px; }
   section.cv .intro-txt {
     font-size: 1.1875em; }
   section.cv .cv-block {
@@ -174,6 +189,23 @@ section.cv {
       margin-top: 10px; }
   section.cv .education .education-place {
     margin-top: 10px; }
+  section.cv .macbook {
+    z-index: 10; }
+    section.cv .macbook video {
+      position: absolute;
+      top: -75px;
+      left: 127px;
+      height: 105%; }
+    section.cv .macbook img {
+      vertical-align: top;
+      margin-top: -110px;
+      width: 180%; }
+  section.cv .corner {
+    padding-top: 90px;
+    width: 100%; }
+    section.cv .corner img {
+      width: 101%;
+      margin-bottom: -1px; }
 
 section.benefits {
   position: relative;
@@ -226,17 +258,79 @@ section.benefits {
 
 section.dist {
   background-color: #a8a8a8;
-  position: relative; }
-  section.dist h2 {
-    text-align: center;
-    color: white; }
+  position: relative;
+  padding: 0; }
+  section.dist .heading {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    margin: 0 auto;
+    top: 0;
+    padding-top: 200px; }
+    section.dist .heading h2 {
+      text-align: center;
+      color: white; }
+  section.dist .container-fluid {
+    padding-left: 0;
+    padding-right: 0; }
   section.dist .dist-block {
+    position: relative;
+    display: block;
+    float: left;
     height: 100%;
-    margin-top: -92px;
     background-size: cover;
     background-position: center center; }
+    section.dist .dist-block::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: 0.8;
+      top: 0;
+      left: 0;
+      transition: 0.2s; }
+    section.dist .dist-block:hover::after {
+      opacity: 0.9; }
+    section.dist .dist-block .wrap {
+      padding: 300px 0 130px;
+      color: white;
+      text-align: center;
+      z-index: 100;
+      position: relative; }
+    section.dist .dist-block .icon {
+      margin: 0 auto 40px;
+      height: 110px;
+      width: 135px;
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat; }
+    section.dist .dist-block .title {
+      font-weight: bold;
+      font-size: 1.25em;
+      margin-bottom: 30px; }
+    section.dist .dist-block .text {
+      padding: 0 20px;
+      min-height: 120px; }
     section.dist .dist-block.learn {
       background-image: url("../img/thumbs/dist/learn_bg.jpg"); }
+      section.dist .dist-block.learn .icon {
+        background-image: url("../img/icons/dist/education.svg"); }
+    section.dist .dist-block.chat {
+      background-image: url("../img/thumbs/dist/chat_bg.jpg"); }
+      section.dist .dist-block.chat .icon {
+        background-image: url("../img/icons/dist/dialog.svg"); }
+    section.dist .dist-block.control {
+      background-image: url("../img/thumbs/dist/control_bg.jpg"); }
+      section.dist .dist-block.control .icon {
+        background-image: url("../img/icons/dist/test.svg"); }
+  section.dist .corner {
+    position: absolute;
+    top: -2px;
+    z-index: 100;
+    width: 100%; }
+    section.dist .corner img {
+      width: 100%; }
 
 section.cta {
   padding: 30px 0;
@@ -249,7 +343,7 @@ section.cta {
     color: #b8b8b8; }
   section.cta button {
     line-height: 32px;
-    padding: 5px 40px; }
+    padding: 5px 60px; }
 
 section.program h2 {
   text-align: center; }
@@ -266,7 +360,7 @@ section.program .program-list {
     height: 40px;
     background: none;
     color: #EC0B43;
-    border: 1px solid;
+    border: 2px solid;
     border-radius: 50%;
     text-align: center;
     line-height: 40px;
@@ -283,7 +377,7 @@ section.program .program-list {
     background-size: cover;
     width: 85px;
     height: 73px;
-    margin: 110px auto 0px; }
+    margin: 110px auto 0; }
     section.program .program-list .icon.composition {
       background-image: url("../img/icons/program/composition.svg"); }
     section.program .program-list .icon.photoshop {
@@ -323,24 +417,16 @@ section.sign-now {
   section.sign-now .sign-offer {
     margin-top: 40px;
     font-size: 1.125em; }
-  section.sign-now .sign-special {
-    margin-top: 65px;
-    color: white;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 1.125em;
-    background-color: #EC0B43;
-    padding: 8px 0;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 3px; }
   section.sign-now table {
-    margin-top: 25px;
+    margin-top: 45px;
     border: 1px solid white;
     margin-left: auto;
     margin-right: auto;
     width: 100%; }
+    section.sign-now table th {
+      padding: 10px 0;
+      background-color: #EC0B43;
+      text-transform: uppercase; }
     section.sign-now table tr, section.sign-now table td {
       border: 1px solid white; }
     section.sign-now table td {
@@ -376,17 +462,20 @@ section.sign-now {
       section.sign-now .form form input:-ms-input-placeholder {
         color: #b8b8b8; }
       section.sign-now .form form input#button {
-        background-color: #1946BA;
+        background: none;
         color: white;
-        border-color: #1946BA;
         text-transform: uppercase;
-        outline: none; }
+        outline: none;
+        transition: 0.2s; }
+        section.sign-now .form form input#button:hover {
+          background-color: #1946BA;
+          border-color: #1946BA; }
 
-section.feedback {
+section.feedbacks {
   position: relative;
   padding-bottom: 110px;
   text-align: center; }
-  section.feedback::after {
+  section.feedbacks::after {
     content: "";
     position: absolute;
     left: 0;
@@ -397,13 +486,31 @@ section.feedback {
     background-image: url("../img/thumbs/itmo_pattern.svg");
     background-repeat: repeat;
     background-position: center; }
-  section.feedback .feedback {
+  section.feedbacks .chevrone {
+    position: absolute;
+    padding: 60px 0;
+    top: 20%;
+    font-size: 1.875em;
+    color: #acacac;
+    z-index: 1000;
+    cursor: pointer;
+    transition: 0.2s; }
+    section.feedbacks .chevrone.left {
+      left: 0; }
+    section.feedbacks .chevrone.right {
+      right: 0; }
+    section.feedbacks .chevrone:hover {
+      color: #1946BA; }
+  section.feedbacks .feedback {
     margin-top: 100px; }
-    section.feedback .feedback .author {
+    section.feedbacks .feedback .item {
+      width: 70%;
+      margin: 0 auto; }
+    section.feedbacks .feedback .author {
       margin-top: 40px;
       font-weight: bold;
       font-size: 1.125em; }
-    section.feedback .feedback .work {
+    section.feedbacks .feedback .work {
       padding-top: 10px;
       font-family: "ALS Schalange Light", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
       font-size: 1em; }
@@ -413,17 +520,10 @@ footer {
   padding-top: 55px;
   background-color: #444444;
   font-family: "ALS Schalange Light", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  position: relative; }
-  footer::after {
-    position: absolute;
-    content: "";
-    bottom: -60%;
-    right: -7%;
-    width: 400px;
-    height: 400px;
-    background-color: #EC0B43;
-    border-radius: 50%;
-    background-image: url("../img/logos/itmo_slogan.svg"); }
+  background-image: url("../img/logos/itmo_slogan.svg");
+  background-size: 300px;
+  background-position: right -85px bottom -180px;
+  background-repeat: no-repeat; }
   footer .credentials {
     font-size: 1em; }
   footer .link {
