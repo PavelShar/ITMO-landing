@@ -4,13 +4,16 @@
     display: none !important; } }
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
-  header .logo, header .hamburger {
+  header .logo {
+    z-index: 2; }
+  header .hamburger {
     z-index: 2; }
   header .nav {
     position: absolute;
     top: -50px;
     width: 100%;
-    z-index: 1; }
+    z-index: 1;
+    background-color: #0B2977; }
   header .top_menu {
     display: none;
     padding: 145px 0 50px; }
