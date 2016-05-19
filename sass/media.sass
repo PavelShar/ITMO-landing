@@ -12,13 +12,18 @@
 @media only screen and (max-width : 1200px)
 
   header
-    .logo, .hamburger
+    .logo
+      //position: absolute
+      z-index: 2
+    .hamburger
+      //position: absolute
       z-index: 2
     .nav
       position: absolute
       top: -50px
       width: 100%
       z-index: 1
+      background-color: #0B2977
     .top_menu
       display: none
       padding: 145px 0 50px
