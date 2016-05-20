@@ -24,8 +24,7 @@ function scrollTo (elem) {
 		scrollElement: $('body'),
 		scrollTarget: elem,
 		easing: 'swing',
-		speed: 500,
-		direction: 'top',
+		speed: 500
 	});
 	return false
 }
