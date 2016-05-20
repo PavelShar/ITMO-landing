@@ -8,16 +8,6 @@ $(function() {
 	};
 
 
-	//Chrome Smooth Scroll
-	try {
-		$.browserSelector();
-		if($("html").hasClass("chrome")) {
-			$.smoothScroll();
-		}
-	} catch(err) {
-
-	};
-
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 	
 });
@@ -30,9 +20,14 @@ $(window).load(function() {
 });
 
 function scrollTo (elem) {
-	$('html, body').animate({
-		scrollTop: $(elem).offset().top
-	}, 1000);
+	$.smoothScroll({
+		scrollElement: $('body'),
+		scrollTarget: elem,
+		easing: 'swing',
+		speed: 500,
+		direction: 'top',
+	});
+	return false
 }
 
 $(document).ready(function (){
@@ -44,7 +39,7 @@ $(document).ready(function (){
 
 
 	var window_h = $(window).height();
-	$('header').css('height', window_h + 'px');
+	//$('header').css('height', window_h + 'px');
 
 	var owl = $('.feedback');
 	owl.owlCarousel({

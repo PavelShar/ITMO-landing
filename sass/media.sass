@@ -87,6 +87,15 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 
+  header
+    .video-wrap
+      background-image: url(../video/poster.jpg)
+      background-size: cover
+      background-position: center center
+
+      video
+        display: none
+
   h2
     line-height: em(20px)
 
@@ -107,8 +116,10 @@
     .copyrights
       width: 65%
 
+
   /*Disable Animation on Mobile Devices*/
-  .animated
+
+//  .animated
     /*CSS transitions*/
     -o-transition-property: none !important
     -moz-transition-property: none !important
@@ -133,6 +144,7 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+
 
 
   header
