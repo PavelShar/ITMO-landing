@@ -55,7 +55,7 @@ $(document).ready(function (){
 
 
 	$(window).scroll(function () {
-		if ($(this).scrollTop() > window_h/2) {
+		if ($(this).scrollTop() > 600) {
 			$('#scroller').fadeIn();
 		} else {
 			$('#scroller').fadeOut();

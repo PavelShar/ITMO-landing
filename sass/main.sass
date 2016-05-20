@@ -1,6 +1,12 @@
 @import "bourbon/bourbon"
 @import "variables"
 
+html
+	-webkit-backface-visibility: hidden
+	-moz-backface-visibility: hidden
+	-ms-backface-visibility: hidden
+	backface-visibility: hidden
+
 html.js .loader
 	background: none repeat scroll 0 0 #ffffff
 	bottom: 0
@@ -121,7 +127,7 @@ section
 	opacity: 0.4
 	transition: 0.2s
 	padding: 20px
-	z-index: 100000
+	z-index: 10000
 	&:hover
 		opacity: 1
 
