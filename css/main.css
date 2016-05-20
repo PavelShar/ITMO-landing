@@ -110,6 +110,7 @@ section {
     opacity: 1; }
 
 header {
+  min-height: 600px;
   position: relative; }
   header .nav_row {
     padding-top: 50px; }
