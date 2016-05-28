@@ -19,13 +19,10 @@ $(window).load(function() {
 
 });
 
-function scrollTo (elem) {
-	$.smoothScroll({
-		scrollElement: $('body'),
-		scrollTarget: elem,
-		easing: 'swing',
-		speed: 500
-	});
+function scrollingTo (elem) {
+	$('html, body').animate({
+		scrollTop: $(elem).offset().top
+	}, 1000);
 	return false
 }
 
@@ -36,9 +33,6 @@ $(document).ready(function (){
 		$('.top_menu').slideToggle();
 	});
 
-
-	var window_h = $(window).height();
-	//$('header').css('height', window_h + 'px');
 
 	var owl = $('.feedback');
 	owl.owlCarousel({
