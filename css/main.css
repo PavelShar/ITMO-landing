@@ -1,8 +1,8 @@
 html {
+  -webkit-font-smoothing: subpixel-antialiased !important;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden; }
+  -ms-backface-visibility: hidden; }
 
 html.js .loader {
   background: none repeat scroll 0 0 #ffffff;
@@ -29,8 +29,8 @@ html.js .loader {
     position: absolute; }
 
 body {
-  font-family: "ALS Schalange Regular", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  font-weight: normal;
+  font-family: "ALS Schalange", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   min-width: 320px;
   position: relative;
@@ -50,7 +50,7 @@ body textarea:required:valid {
   display: none; }
 
 .headers, h1, h2, h3, h4, h5, h6 {
-  font-family: "ALS Schalange Regular", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "ALS Schalange", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-weight: normal;
   margin: 0; }
 
@@ -70,6 +70,8 @@ h3 {
   padding: 0; }
   .ul_menu li, header .top_menu > ul li, section.cv .skills ul li, section.program .point ul li {
     display: inline-block; }
+    .ul_menu li a, header .top_menu > ul li a, section.cv .skills ul li a, section.program .point ul li a {
+      outline: 0; }
 
 button {
   padding: 5px 25px;
@@ -147,7 +149,8 @@ header {
     header .main_title h1 {
       color: white; }
     header .main_title h3 {
-      font-family: "ALS Schalange Light", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+      font-family: "ALS Schalange", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+      font-weight: 300;
       padding-top: 10px;
       color: white; }
     header .main_title button {
@@ -157,7 +160,8 @@ header {
     position: absolute;
     bottom: 20px; }
     header .head_credentials h5 {
-      font-family: "ALS Schalange Light", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+      font-family: "ALS Schalange", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+      font-weight: 300;
       font-size: 0.875em;
       color: rgba(255, 255, 255, 0.6); }
   header video {
@@ -187,7 +191,7 @@ section.cv {
     padding-top: 30px; }
     section.cv .cv-block h3 {
       font-size: 1.25em;
-      font-weight: bold; }
+      font-weight: 500; }
     section.cv .cv-block .position-items {
       margin-top: 10px; }
       section.cv .cv-block .position-items .position-item {
@@ -245,14 +249,15 @@ section.benefits {
       height: 45px;
       margin-top: 45px;
       font-size: 1.25em;
-      font-weight: bold;
+      font-weight: 500;
       color: white;
       text-align: center;
       line-height: 1.25em; }
     section.benefits .benefit-list .benefit-text {
       margin-top: 25px;
       color: white;
-      font-family: "ALS Schalange Light", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+      font-family: "ALS Schalange", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+      font-weight: 300;
       font-size: 0.9375em;
       text-align: center; }
     section.benefits .benefit-list .icon {
@@ -320,7 +325,7 @@ section.dist {
       background-position: center center;
       background-repeat: no-repeat; }
     section.dist .dist-block .title {
-      font-weight: bold;
+      font-weight: 500;
       font-size: 1.25em;
       margin-bottom: 30px; }
     section.dist .dist-block .text {
@@ -417,7 +422,7 @@ section.program .point {
   section.program .point .title {
     padding: 15px 0 25px;
     color: #EC0B43;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 1.125em; }
   section.program .point ul li {
     display: block; }
@@ -522,18 +527,20 @@ section.feedbacks {
       margin: 0 auto; }
     section.feedbacks .feedback .author {
       margin-top: 40px;
-      font-weight: bold;
+      font-weight: 500;
       font-size: 1.125em; }
     section.feedbacks .feedback .work {
       padding-top: 10px;
-      font-family: "ALS Schalange Light", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+      font-family: "ALS Schalange", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+      font-weight: 300;
       font-size: 1em; }
 
 footer {
   color: white;
   padding-top: 55px;
   background-color: #444444;
-  font-family: "ALS Schalange Light", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "ALS Schalange", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-weight: 300;
   background-image: url("../img/logos/itmo_slogan.svg");
   background-size: 300px;
   background-position: right -85px bottom -180px;

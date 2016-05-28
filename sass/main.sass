@@ -2,10 +2,10 @@
 @import "variables"
 
 html
+	-webkit-font-smoothing: subpixel-antialiased !important
 	-webkit-backface-visibility: hidden
 	-moz-backface-visibility: hidden
 	-ms-backface-visibility: hidden
-	backface-visibility: hidden
 
 html.js .loader
 	background: none repeat scroll 0 0 #ffffff
@@ -32,8 +32,8 @@ html.js .loader
 		position: absolute
 
 body
-	font-family: $font_regular, $helvetica
-	font-weight: normal
+	font-family: $font, $helvetica
+	font-weight: 400
 	font-size: 16px
 	min-width: 320px
 	position: relative
@@ -53,7 +53,7 @@ body textarea:required:valid
 
 
 .headers
-	font-family: $font_regular, $helvetica
+	font-family: $font, $helvetica
 	font-weight: normal
 	margin: 0
 
@@ -77,6 +77,8 @@ h3
 	padding: 0
 	li
 		display: inline-block
+		a
+			outline: 0
 
 
 button

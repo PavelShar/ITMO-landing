@@ -67,7 +67,6 @@
 @media only screen and (max-width: 768px) {
   header .video-wrap {
     background-image: url(../video/poster.jpg);
-    z-index: -10000;
     background-size: cover;
     background-position: center center; }
     header .video-wrap video {
