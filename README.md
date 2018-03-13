@@ -3,8 +3,6 @@ Landing page "Professional retraining-course \`Design and layout of printed prod
 
 ![](https://github.com/PavelShar/ITMO-landing/blob/103fb03a0a295b75409a437fe9a2c47ab86c44b2/landing.png?raw=true)
 
-[Demo](https://pavelshar.github.io/ITMO-landing/)
-
 ### Technologies
 - [Sass](http://sass-lang.com/)
 - [Burbon](http://bourbon.io/)
